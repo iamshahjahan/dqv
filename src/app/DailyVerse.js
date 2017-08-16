@@ -16,7 +16,7 @@ export default class DailyVerse extends React.Component{
 
 	componentDidMount() {
 		var _this = this;
-		axios.get('http://localhost:8081/api/random/eng/wahid')
+		axios.get('http://dailyquranicverses.com/api/random/eng/wahid')
 		  .then(function (response) {
 		    console.log(response.data.data[0].text);
 		    _this.setState({
