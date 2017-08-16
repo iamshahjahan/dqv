@@ -1,0 +1,60 @@
+ES6
+-----
+
+Difference between function scope and block scope:
+
+function scope variables are not accessed outside.
+
+	function checkScope() {
+		var a = 1;
+		console.log("log");
+			
+	}
+
+	checkScope();
+
+	console.log(a); //error
+
+Block scope can be accessed from outside.
+
+	if ( 1 )
+	{
+		var name = "shahjahan";
+
+	}
+	console.log(name); //shahjahan
+
+let was introduced for the same reason.
+
+let a = 1;
+const a = 1;
+
+const o = {0:'name'}
+
+o can't be changed. But it's properties can be.
+
+//Arrow functions
+
+const square = (a,b) => {
+	return a + b;
+}
+
+//Arrow functions are lexically scoped, i.e., from their parent's keyword. While normal functions are bound to their caller.
+
+// a = {'name':'shahahan'};
+console.log(this);
+
+
+let checkScope = {
+	f1: function () {
+		console.log(this);
+	},
+	f2: function => () {
+		console.log(this);
+	}
+}
+
+checkScope.f1();
+checkScope.f2();
+
+
