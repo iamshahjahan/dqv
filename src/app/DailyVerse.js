@@ -18,7 +18,7 @@ export default class DailyVerse extends React.Component{
 
 	componentDidMount() {
 		var _this = this;
-		axios.get(config.host+':'+config.port+'/api/random/eng/wahid')
+		axios.get(config.host+'/api/random/eng/wahid')
 		  .then(function (response) {
 		    console.log(response.data.data[0].text);
 		    _this.setState({
