@@ -1,6 +1,6 @@
 const env = process.env;
 
 export default {
-	port : env.port || 8081,
-	host : env.host || "http://0.0.0.0",
+	port : env.port || 8085,
+	host : env.host || "http://dailyquranicverses.com",
 }
