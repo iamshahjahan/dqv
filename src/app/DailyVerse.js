@@ -1,6 +1,8 @@
 import React from "react";
 import { render } from "react-dom";
-import axios from 'axios'
+import axios from 'axios';
+import config from '../../config'
+
  
 export default class DailyVerse extends React.Component{
 	constructor()
@@ -16,7 +18,7 @@ export default class DailyVerse extends React.Component{
 
 	componentDidMount() {
 		var _this = this;
-		axios.get('http://dailyquranicverses.com/api/random/eng/wahid')
+		axios.get(config.host+':'+config.port+'/api/random/eng/wahid')
 		  .then(function (response) {
 		    console.log(response.data.data[0].text);
 		    _this.setState({
